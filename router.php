@@ -2,8 +2,7 @@
 /**
  * Routes incoming requests to the correct PHP file for action.
  */
-class Router
-{
+class Router {
   /**
    * The URI of the current request.
    * 
@@ -14,16 +13,16 @@ class Router
   /**
    * Constructor that parses and stores the request URI.
    */
-  function __construct()
-  {
+  function __construct() {
     $this->uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
   }
 
   /**
    * Helps in routing to the correct file.
+   * 
+   * @return void
    */
-  function direct()
-  {
+  function direct() {
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
       switch ($this->uri) {
         case '/':
@@ -47,21 +46,21 @@ class Router
           $controller->storeTasks();
           break;
         case '/remove':
-          require_once './RemoveTasks.php';
+          require_once './PerformTasks.php';
           require_once './dbconnect.php';
           $db = Database::connect();
           $controller = new PerformTasks($db);
           $controller->deleteTasks();
           break;
         case '/done':
-          require_once './RemoveTasks.php';
+          require_once './PerformTasks.php';
           require_once './dbconnect.php';
           $db = Database::connect();
           $controller = new PerformTasks($db);
           $controller->doneTasks();
           break;
         case '/update':
-          require_once './RemoveTasks.php';
+          require_once './PerformTasks.php';
           require_once './dbconnect.php';
           $db = Database::connect();
           $controller = new PerformTasks($db);

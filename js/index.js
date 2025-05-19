@@ -21,6 +21,8 @@ $(document).ready(function () {
       }
     });
   })
+
+  // Code for removing task.
   $('.btn-remove').on('click', function (e) {
     e.preventDefault();
     const task_id = $(this).closest('.btn-remove').data('task-id');
@@ -45,6 +47,7 @@ $(document).ready(function () {
     });
   })
 
+  // Code for updating status.
   $('.btn-tick').on('click', function (e) {
     e.preventDefault();
     const task_id = $(this).closest('.btn-tick').data('task-id');
@@ -69,6 +72,7 @@ $(document).ready(function () {
     });
   })
 
+  // Code for updating task.
   $('.btn-update').on('click', function (e) {
     e.preventDefault();
     var task_id = $(this).closest('.btn-update').data('task-id');
@@ -95,9 +99,6 @@ $(document).ready(function () {
           console.log(xhr.responseText);
         }
       });
-     
-
     });
-
   })
 })

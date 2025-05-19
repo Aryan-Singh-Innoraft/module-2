@@ -7,6 +7,8 @@ use Dotenv\Dotenv;
 class LoadEnv {
   /**
    * Function to load .env file key value pairs into $_ENV super global.
+   * 
+   * @return void
    */
   public static function loadDotEnv() {
     $dotenv = Dotenv::createImmutable(__DIR__);

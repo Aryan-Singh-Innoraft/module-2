@@ -14,7 +14,7 @@ class StoreTasks {
   * Constructor to initialize database connection.
   *
   * @param object $database
-  *    Database connection instance (PDO).
+  *  Database connection instance (PDO).
   */
   public function __construct(object $conn) {
     $this->conn = $conn;
@@ -27,8 +27,7 @@ class StoreTasks {
    */
   public function storeTasks() {
     $task = $_POST["task"];
-
-    // Response that would be sent in frontend 
+    // Response that would be sent in frontend.
     $response = [
       "success" => FALSE,
       "message" => ""
