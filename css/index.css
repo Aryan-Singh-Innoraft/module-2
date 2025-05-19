@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+body {
+  background-color: rgba(192, 192, 192, 0.185);
+  font-family: "Roboto", sans-serif;
+}
+.top-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
+  margin-top: 30px;
+}
+.input , .update-input , .btn {
+  padding: 10px;
+  margin: 5px 0;
+}
+.btn , .update-task-btn {
+  cursor: pointer;
+  background-color: rgb(126, 228, 126);
+  border: none;
+}
+/* Designing the table.  */
+.tasks-wrapper {
+  min-width: 100%;
+}
+.table {
+  min-width: 80%;
+  margin: 0 auto;
+}
+.table td {
+  border: 1px solid black;
+  margin: 0;
+  padding: 5px;
+}
+.btn-remove , .btn-tick , .btn-update{
+ min-width: 25px;
+}
+/* Update form  */
+.update-form {
+  display: none;
+  max-width: 50%;
+  margin: 20px auto;
+
+}
+.update-form .update-input {
+  min-width: 100%;
+  padding: 10px;
+}
+.update-form .update-task-btn {
+  min-width: 100%;
+  padding: 10px;
+}

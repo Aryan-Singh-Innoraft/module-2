@@ -1,0 +1,17 @@
+{
+    "name": "innoraft/todoapp",
+    "autoload": {
+        "psr-4": {
+            "Innoraft\\Todoapp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aryan Singh",
+            "email": "aryan.singh@innoraft.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
